@@ -9,15 +9,9 @@ parser = argparse.ArgumentParser(description="A simple script to enumerate the w
 parser.add_argument('-u', '--url', help='The wordpress webiste URL', type=str)
 parser.add_argument('-s', '--start', default=0 ,help='The nth user to start', type=int)
 parser.add_argument('-e', '--end', default=500, help='The nth user to stop', type=int)
-
 args = parser.parse_args()
 
-def Help():
-    Help = '''\n
-    \tHELP: python wpUserEnumerator.py <url>
-    '''
-    return Help
-
+# The main method....
 def main():
     url = args.url
     suffix = '/wp-json/wp/v2/users/'
